@@ -9,5 +9,5 @@ multi
 x^2-xa-xb+ab=x^2+xa+xb+ab-18
 18=2xa+2xb --> 9/(a+b)=x
 
-math :DDDDDDDD
+math D:
 
