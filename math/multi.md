@@ -79,7 +79,6 @@ $$
 
 $$
 \text{4. }(ka)\cdot b=k(a\cdot b)=a\cdot(kb)
-
 $$
 
 
@@ -99,10 +98,7 @@ prove this thm at home
 projections:
 
 
-$$
-
-\text{scalar length of a projection: } \newline \frac{a\cdot b}{||a||}
-$$
+$$\text{scalar length of a projection: } \newline \frac{a\cdot b}{||a||}$$
 
 
 $$
