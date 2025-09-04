@@ -58,4 +58,22 @@ $$
 V(t) = 12.2 + C\,e^{-(11/12.2)t}.
 $$
 
-Now let \(p(t), q(t)\) be non-constants
+Now let \(p(t), q(t)\) be non-constants:
+$$
+y' + p(t)\,y = q(t), \qquad \mu(t) = e^{\int p(t)\,dt}.
+$$
+Multiply by \(\mu(t)\):
+$$
+\mu(t) y' + \mu(t) p(t) y = \mu(t) q(t).
+$$
+Take derivative (product rule):
+$$
+(\mu(t) y)' = \mu(t) q(t),
+$$
+so
+$$
+y(t) = \frac{1}{\mu(t)}\!\left(\int \mu(t)\,q(t)\,dt + C\right).
+$$
+
+Section 2.2
+---
