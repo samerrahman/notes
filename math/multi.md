@@ -107,7 +107,7 @@ $$
 
 
 $$
-\text{orthogonal to projection: } \text{orth}_{a}b =b-\text{proj}_{a}b
+\text{orthogonal to projection: }\operatorname{orth}_{a}b= b- \operatorname{proj}_{{a}}b
 $$
 
 
