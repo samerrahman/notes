@@ -72,7 +72,7 @@ $$
 \text{scalar length of a projection: } \newline \frac{a\cdot b}{||a||}
 $$
 $$
-\text{vector of a projection: } \frac{a\cdot b}{||a||^2}\vec{\cdot}a
+\text{vector of a projection: } \frac{a\cdot b}{||a||^2}\cdot \vec{a}
 $$
 $$
 \text{orthogonal to projection: } \text{orth}_{a}b =b-\text{proj}_{a}b
