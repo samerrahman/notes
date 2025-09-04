@@ -105,10 +105,11 @@ $$
 \text{vector of a projection: } \frac{a\cdot b}{||a||^2}\cdot \vec{a}
 $$
 
+orthogonal to projection: 
 
-\\[
-\text{orthogonal to projection: }\quad \operatorname{orth}_{\mathbf{a}}(\mathbf{b}) = \mathbf{b} - \operatorname{proj}_{\mathbf{a}}(\mathbf{b})
-\\]
+$$
+\operatorname{orth}_{a}b= b -\operatorname{proj}_{ a}b
+$$
 
 
 angles in the xyz plane: (alpha is angle to x, beta angle to y, gamma angle to z)
