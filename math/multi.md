@@ -106,9 +106,9 @@ $$
 $$
 
 
-\[
+\\[
 \text{orthogonal to projection: }\quad \operatorname{orth}_{\mathbf{a}}(\mathbf{b}) = \mathbf{b} - \operatorname{proj}_{\mathbf{a}}(\mathbf{b})
-\]
+\\]
 
 
 angles in the xyz plane: (alpha is angle to x, beta angle to y, gamma angle to z)
