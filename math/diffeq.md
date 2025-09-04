@@ -1,102 +1,61 @@
 diffeq
 =====
-- Category: math 
-- Tags: arsenau 
+
+- Category: math
+- Tags: arsenau
 - Created: 2025-09-02 @ 12:52:44-4:00
 
 Section 2.1
 ---
 
-
 1.
-$$
-F=MA
-\\
 
-$$
+   $$
+   F = MA
+   $$
+
 2.
+
+   $$
+   A = P - K\,V
+   $$
+
+where \(P\) is the initial acceleration (≈ 11.0 for Usain), \(V_{\max}\) is max velocity (≈ 12.2 for Usain), and \(K\) depends on the person.
+
+So we could find \(k = 11/12.2\). Using (1) and (2),
 $$
-A=P-K*Vmax
+MA = MP - MKV,
+$$
+let \(A = V'\). Usain equation:
+$$
+V' + \frac{11}{12.2} V = 11.0.
 $$
 
-where P is the initial accel -- 11.0 for usain,
-Vmax, is max velocity -- 12.2 for Usain
-K is a constant that depends on the person 
+This is a first-order linear ODE.
 
-so we could find $$ k= 
- 11/12.2 $$
-using equations one and two
+General form:
 $$
-MA = MP - MKV
-$$
-let
-$$
- A = V'
-$$
-usain equation:
-$$
-V' + \frac{11}{12.2} V = 11.0
-
+v' + K v = P.
 $$
 
-this is a linear differential equation 
-a first order one, because first derivative only
-if we were to have squares, variables multiplied, it no longer is linear
-
-let's take
+Integrating factor:
 $$
-\frac{dy}{dt}\ + P(t)*y= q(t)
+\mu(t) = e^{Kt}.
 $$
 
-we could use separation of variables 
-but we're going to use integrating factor LOL
-
-
-general form 
+Distribute the integrating factor:
 $$
-v' + KV =P
-$$
-integrating factor
-$$
-I = e^{kt}
-$$
-distrib the integrating factor
-$$
-e^{kt}*v'l+ Ke^{kt}*v=Pe^{kt}
-$$
-This is  a product rule
-
-integrate both sides
-
-$$
-V=\frac{P}{k}+Ce^{-kt}
-$$
-for usain--
-
-$$
-V=12.2+Ce^{-\frac{-11}{12.2}t}
+(e^{Kt} v)' = P\,e^{Kt}.
 $$
 
-
-let's let p(t), q(t) not be constants
+Integrate both sides:
 $$
-y'+p(t)y=q(t)
-$$
-$$
-I(t)=\mu(t)
-$$
-$$
-\mu(t) y'+\mu(t)p(t)=\mu(t)q(t)
+v(t) = \frac{P}{K} + C e^{-K t}.
 $$
 
-take derivative
+For Usain:
+$$
+V(t) = 12.2 + C\,e^{-(11/12.2)t}.
+$$
 
-$$
-\mu(t)y'+\mu'(t)y=\mu(t)q(t)
-$$
-$$
-\mu'(t)
-=\mu(t)p(t)$$
-2.2
----
-
+Now let \(p(t), q(t)\) be non-constants
