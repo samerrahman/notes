@@ -75,5 +75,272 @@ $$
 y(t) = \frac{1}{\mu(t)}\!\left(\int \mu(t)\,q(t)\,dt + C\right).
 $$
 
-Section 2.2
+Section 2.2 further discussions on linear First ODE
 ---
+$$
+\text{Theorem: if } p(t), q(t) \text{are continuous on an open interval containing } t=t_{0} \text{ then } \exists \text{ a unique soln, s.t. } y(t_{0})=y_{0}
+$$
+
+
+$$
+y'+p(t)y=q(t)
+$$
+
+Ex1
+
+$$
+y' = \frac{4t^2-2y}{t}
+$$
+
+$$
+y'+\frac{2}{t}y=4t
+$$
+$$
+e^{ \int \frac{2}t \, dt  } =t^2
+$$
+
+$$
+\int \frac{d}{dt}(t^2y)dt=\int 4t^{3}dt
+$$
+
+$$
+\text{ we get: } t= \frac{t^4+c}{e^{ 2 }}=t^2+ct^{2}
+$$
+
+Ex2
+
+$$
+y'+\frac{2(1+t)}{t(2+t)}y=\frac{1+3t^2}{t(2+t^{2})} \text{ and } y(-1)=1
+$$
+
+need to use partial fractions here: 
+
+$$
+\int \frac{A}{t}+\frac{B}{t+2}dt = e^{ \ln|t|+\ln|t+2| }
+$$
+
+$$
+\text{giving } I(t) = t(t+2)
+$$
+
+ solve the integrating factor problem
+
+$$
+y= \frac{t+t^{3}+c}{t(t+2)}
+$$
+
+plug in our initial condition,  giving
+
+$$ 
+c=1 
+$$
+
+
+
+2.3 -- Separable differential equation
+---
+
+$$
+\frac{dy}{dx} = F(x,y)
+$$
+
+translated into
+
+$$
+M(x)dx + N(y)dy = 0
+$$
+or 
+
+$$
+M(x)+N(y)\cdot \frac{dy}{dx}=0
+$$
+
+EX 1:
+$$
+\frac{dy}{dx} = \frac{3x^2+1}{3y^2-6y}
+$$
+$$
+\int(3y^2-6y) dy=\int(3x^2+1)dx
+$$
+$$
+y^3-3y^2=x^{3}+x+C
+$$
+
+note that 
+$$
+y \neq 0, 2
+$$
+so interval is
+$$
+(0,2) \lor (-\infty, 0) \lor (2,\infty)
+$$
+
+EX2
+a) find the solution Eq. 
+b) given y(1) = -2, find the solution eq
+c) given y(1) = 4, write a solution eq
+
+$$
+\frac{dy}{dx} =\frac{1-2x}{y}
+$$
+
+$$
+\text{a)} \quad \int ydy = \int(1-2x)dx
+$$
+$$
+\frac{1}{2}y^2= x-x^2+C
+$$
+
+$$
+\text{b)} \quad \frac{1}{2}\cdot 4 = C
+$$
+
+$$
+\text{b)} \quad \frac{1}{2}\cdot 16 = C
+$$
+
+
+2.8.1 exact equations
+---
+
+$$
+M(x,y) + N(x,y) \cdot y' = 0
+$$
+
+$$
+\text{Find: } \psi(x,y) = c 
+$$
+such that
+$$
+\frac{\partial \psi}{\partial x} =M(x,y)
+$$
+and
+$$
+\frac{\partial \psi}{\partial y} =N(x,y)
+$$
+so
+$$
+\frac{\partial \psi}{\partial x} + \frac{\partial \psi}{\partial y} \cdot \frac{dy}{dx} =0
+$$
+
+Clairaut's THM: taking the partial derivative wrt x and then also taking it wrt y, it's the same as vice versa
+
+so if
+$$
+\frac{\partial M}{\partial y} =\frac{\partial N}{\partial x}
+$$
+then our og equation is an exact equation 
+
+
+EX1
+$$
+\frac{y}{x} + 6x + (\ln x-2)  \frac{dy}{dx} = 0 
+$$
+
+(dy dx coudl be seperated out a first, doesnt matter as long as we can get to this form)
+
+take the partial derivative wrt y on LHS
+$$
+\frac{\partial M}{\partial Y}= \frac{1}{x}
+$$take the partial derivative wrt x on RHS
+
+$$
+\frac{\partial M}{\partial Y}= \frac{1}{x}
+$$
+
+again on LHS
+$$
+\int \frac{y}{x}+6x\text{ } dx
+$$
+giving: 
+$$
+y\ln x + 3x^2
++C(y)
+$$
+now derive this wrt y
+$$
+\ln x + C'(y)
+$$
+now we set C'(y) to any function with no x's in it????
+$$
+C'(y) = -2 \quad C(y) = -2y + C
+
+$$
+and on RHS
+
+$$
+\int \ln x -2 \text{ } dy
+$$
+giving; 
+$$
+y\ln x -2y + C(x)
+$$
+
+$$
+\frac{y}{x} + D'(x) 
+$$
+D can be any function
+$$
+D'(x) = 6x 
+$$
+$$
+D(x) = 3x^2 + C
+$$
+
+plug D into our integrated function
+$$
+\Psi (x, y) \implies y\ln|x| + 3x^2 - 2y = C
+$$
+
+explicitly 
+$$
+y = \frac {C-3x^2}{\ln x - 2}
+$$
+
+
+
+2.8.2 Integrating Factors to create an Exact equation 
+---
+
+$$
+M (x,y) dx + N(x,y)dy = 0
+$$
+unfortuntately, we find this equation is not exact, using method from 2.8.1
+
+so wtf integrating factor
+$$
+\mu(x,y)
+$$
+$$
+\mu(x,y) M(x,y)dx + \mu(x,y)N(x,y)dy = 0
+$$
+this is Exact iff
+
+$$
+\frac{\partial}{\partial y} (\mu \cdot M) = \frac{\partial}{\partial x} (\mu \cdot N)
+$$
+
+$$
+\mu \cdot M_{y} + M_{}{y} \cdot \mu = \mu_{x} \cdot N + \mu \cdot N_{x}
+$$
+
+$$
+\mu(M_{y} -N_{x}) =M_{x}N - M_{y} N
+$$
+
+still too diff to solve, let's look at some specfic cases
+solve if mu is some function of only one variable
+
+$$
+\text{if } \mu=f(x) \text{ then } \mu_{y} = 0
+$$
+$$
+\mu_{x} = \frac{\mu (M_{y} -N_{x})}{N}
+$$
+solveable differential equation
+$$
+\frac{ (M_{y} -N_{x})}{N} = g(x)
+$$
+
+cliffhanger, will solve tmr 
+

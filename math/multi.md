@@ -96,7 +96,9 @@ prove this thm at home
 
 
 projections:
-
+$$
+\operatorname{proj}_{a}b
+$$
 
 $$\text{scalar length of a projection: } \newline \frac{a\cdot b}{||a||}$$
 
@@ -132,3 +134,222 @@ physics application
 $$
 W = F\cdot D = ||F_{component}||\times||D||
 $$
+
+
+
+12.4 Cross Product
+---
+(a,b,c are vectors)
+
+$$
+{a}\times {b} = \quad <a_{2}b_{3}-a_{3}b_{2}, \text{ } \text{ } a_{3}b_{1}-a_{1}b_{3}, \text{ } \text{ }a_{1}b_{2}-a_{2}b_{1} >
+$$
+$$
+a\times b= \det \begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k} \\
+a_{1} & a_{2} & a_{3}  \\
+b_{1}&b_{2}&b_{3}
+\end{vmatrix}
+
+$$
+
+
+as governed by the right hand rule: 
+
+$$
+\text{Theorem: } a\times b \text{ is orthogonal to both } {a} \text{ and } {b} 
+$$
+
+
+$$
+\text{Theorem: } a \times b = -b \times a
+$$
+
+$$
+\text{ want to find }||a\times b||^2
+$$
+$$
+\text{expanding from our definition of } a\times b \text{:}
+$$
+$$
+ a_{2}^{2}\cdot b_{3}^{2}+a_{3}^{2}\cdot {2}^{2}-2a_{2}\cdot  a_{3}\cdot  b_{2} \cdot  b_{3}
+$$
+$$
++a_{3}^{2} \cdot b_{1}^{2}+a_{1}^{2} \cdot b_{3}^{2}-2a_{1} \cdot a_{3}  \cdot b_{1}  \cdot b_{3}
+$$
+$$
++a_{1}^{2}  \cdot b_{2}^{2}+a_{2}^{2}  \cdot b_{1}^{2}-2a_{1} \cdot a_{2}  \cdot b_{1} \cdot b_{2}
+$$
+
+add and subtract to the equation:
+$$
++a_{1}^{2} b_{1}^{2} + a_{2}^{2}b_{2}^{2} + a_{3}^{2}b_{3}^{2}  -a_{1}^{2} b_{1}^{2} - a_{2}^{2}b_{2}^{2} - a_{3}^{2}b_{3}^{2} 
+$$
+giving:
+$$
+(a_{1}^{2}+a_{2}^{2}+a_{3}^{2})(b_{1}^{2}+b_{2}^{2}+b_{3}^{2})-(a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3})^2
+$$
+$$
+(a_{1}b_{1}+a_{2}b_{2}+a_{3}b_{3})^2 \text{ is the dot product of a and b squared}
+$$
+
+which is 
+$$
+||a||^{2}||b||^{2}-\cos ^{2}\theta
+$$
+
+$$
+(a_{1}^{2}+a_{2}^{2}+a_{3}^{2}),(b_{1}^{2}+b_{2}^{2}+b_{3}^{2})
+$$
+these are just are just 
+$$
+||a||^2, ||b||^2
+$$
+so we have
+$$
+||a||^2  ||b||^2 - ||a||^{2}||b||^{2}-\cos ^{2}\theta
+$$
+
+$$
+\text{simplifies to: } ||a||^{2}||b||^{2}\sin ^{2}(\theta)
+$$
+so
+
+$$
+||a\times b||= ||a||||b||\sin \theta
+$$
+
+this is also the area of the parallelogram formed by a and b
+
+$$
+\text{Theorem: } (da)\times b=d(a\times b)= a\times(db)
+$$
+
+$$
+\text{Theorem: } a\times (b+c) = (a \times b) +(a\times c)
+$$
+
+$$
+\text{Theorem: } a \cdot (b\times c) =(a\times b) \cdot c
+$$
+
+volume of a parallellopiped (a.k.a magnitude of scalar triple product):
+
+$$
+||a||\cdot||b\times c||\cos \alpha \text{ where a,b,c are interchangeable}
+$$
+
+
+actual scalar product
+
+$$
+a \cdot (b\times c)
+$$
+(you can do this with a 3x3 determinant if you want)
+
+
+$$
+\text{Theorem: } a \times (b \times c) =b(a\cdot c) -c(a\cdot b)
+$$
+(i don't think this was proven in class)
+
+Physics application, torque:
+
+$$
+\tau =r \times F
+$$
+
+
+12.5 Equations of Lines and Planes in Space
+---
+
+$$
+\vec{r} = \vec{r_{0}} + t\vec{v}
+$$
+$$
+\left( \begin{matrix}x  \\
+y \\
+ z \\
+
+
+\end{matrix}\right) 
+
+= \left( \begin{matrix}x_{0}  \\
+y_{0} \\
+ z_{0} \\
+
+\end{matrix}\right) 
++ \left( \begin{matrix}a  \\
+b \\
+ c \\
+\end{matrix}\right) \cdot t
+$$
+in parametric form
+$$
+\begin{matrix}
+x = x_{0}+at \\
+y=y_{0}+bt \\
+z=z_{0}+ct
+\end{matrix}
+$$
+
+
+so 
+$$
+t = \frac{x-x_{0}}{a} = \frac{y-y_{0}}{b} = \frac{z-z_{0}}{c}
+$$
+
+
+given two points 
+$$
+\vec{r_{0}}  \text{ and } \vec{r_{1}}
+$$
+
+$$
+\vec{r_{1}- r_{0}} = \left< x_{1}-x_{0} , y_{1}- y_{0}, z_{1}-z_{0}   \right> 
+$$
+
+** this is wrong i thinkg** define r0 
+$$
+r = r_{0} + v_{0} \cdot t
+$$
+
+
+for planes 
+- a plane can be defined by 1 normal vector perpendicular 
+$$
+\text{ where } \vec{n} \text{ is the normal vector}
+$$
+so
+$$
+\vec{n} \cdot ( r- r_{0})= 0
+$$
+point normal form:
+$$
+a(x-x_{0}) + b(y-y_{0}) +c(z-z_{0})= 0
+$$
+standard form: 
+$$
+ax+by + cz + d =0 \text{ where } d= -ax_{0}-by_{0}-cz_{0}
+$$
+
+take some point off the plane 
+$$
+ p_{0} = \left( x_{1},y_{1},z_{1} \right) 
+$$
+
+WTF: distance from point to plane 
+to do 
+- project vec from point onto the normal vector of the plane, 
+	- evaluate magnitude 
+
+$$
+\frac{\vec{n} \cdot r_{0}P_{1}}{||n||}
+$$
+and this is just (using the point normal eq)
+
+$$
+\frac{a(x_{1}-x_{0}) +b(y_{1}-y_{0}) + c(z_{1}-z_{0})}{^\sqrt{ a^2+b^{2}+c^{2} } }
+$$
+
+
