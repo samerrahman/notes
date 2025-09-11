@@ -353,3 +353,136 @@ $$
 $$
 
 
+Cylinders & Quadric Surfaces
+---
+
+A **cylinder** is a surface that consists of all lines ( rulings ) that are parallel to a given line and that passes through a given plane curve. 
+
+
+Ex1: 
+
+$$
+z = x^2
+$$
+parabola in the xz plane 
+
+our given line would be the y axis 
+
+this makes a parabolic cylinder 
+![[Pasted image 20250910142932.png]]
+
+Ex2:
+
+$$
+x^2+y^2 = 1
+$$
+this makes a cylinder ( a circular cylinder ) when z axis is the ruling line
+
+
+
+Quadric Surfaces: 
+
+a surface that is the graph 2nd degree in 3 variable system. 
+
+$$
+Ax^{2}+By^{2}+Cz^{2}+Dxy+Exz+Fyz+Gx+Hy+Iz+J=0
+$$
+$$
+Gx, Hy, Iz, \text{are generally translations unless } A \lor B \lor C = 0
+$$
+$$
+\text{The basic most important part of this surface is } Ax^{2} +By ^{2} + Cz ^{2}
+$$
+
+let 
+$$
+J= 0 \quad A,B,C \neq 0 \quad \text{either one or two of these are negative}
+$$
+
+Ex3( using above) :
+
+$$
+\begin{matrix}
+x^{2} - y^{2} = 4z^{2} = 0  \\
+x^{2} = y^{2} + 4z^{2}
+\end{matrix}
+$$
+this ends up being an elliptical cone, we can see this by graphing
+![[Screenshot 2025-09-10 at 2.41.14 PM.png]]
+
+
+Ex 4:
+
+now let 
+$$
+ A,B,C> 0 
+$$
+$$
+x^{2} + 4y^{2} + 9z^{2} = 36
+$$
+
+this is an ellipsoid upon graphing 
+we can tellwhat the semi axis are by setting two variables = 0 
+$$
+\begin{matrix}
+x = \pm 6
+y = \pm {3}
+z = \pm {2}
+\end{matrix}
+$$
+
+
+now let 
+$$
+A,B,C \text{ not the same sign } J \neq 0 
+$$
+Ex5:  Hyperboloid of 2 sheets,
+$$
+x^{2} - y ^{2} - 4z^{2} = 16
+$$
+
+Ex 6: Hyperboloid of 1 sheet
+
+$$
+x^{2} + y ^{2} - 4z ^{2} = 16
+$$
+
+now 
+EX7:
+$$
+4x^{2} + y ^{2} + z = 0
+$$
+this is an elliptical paraboloid 
+![[Screenshot 2025-09-10 at 3.00.04 PM.png]]
+
+
+Ex8: 
+
+$$
+4x^{2} - y^{2} + z = 0 
+$$
+Hyperbolic paraboloid
+
+
+Ex 9: 
+
+$$
+4x^{2} + y^{2} + 4z^{2} -4y - 24z  +36
+$$
+
+ complete the square for y  and z
+
+$$
+4x^{2} + y^{2} - 4y  + \mathbf{4} + 4(z^{2}-6z +\mathbf{9}) = -36 + \mathbf{4} + \mathbf{36}
+$$
+$$
+4x^{2} + (y-2)^{2} + 4(z-3)^2 =4
+$$
+$$
+\text{center at : } (0,2,3)
+$$
+
+
+$$
+
+$$
