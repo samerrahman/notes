@@ -1,0 +1,180 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>13.3</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\(', '\)']],
+                displayMath: [['$$', '$$'], ['\[', '\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+        </script>
+        <style>
+            body {
+                font-family: 'Times New Roman', serif;
+                font-size: 12pt;
+                line-height: 1.6;
+                max-width: 8.5in;
+                margin: 0 auto;
+                padding: 1in;
+                color: #333;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                color: #2c3e50;
+                margin-top: 1.5em;
+                margin-bottom: 0.5em;
+            }
+            h1 {
+                font-size: 18pt;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 0.3em;
+            }
+            h2 {
+                font-size: 16pt;
+                border-bottom: 1px solid #bdc3c7;
+                padding-bottom: 0.2em;
+            }
+            h3 {
+                font-size: 14pt;
+            }
+            p {
+                margin-bottom: 1em;
+            }
+            .math {
+                margin: 1em 0;
+            }
+            code {
+                background-color: #f8f9fa;
+                padding: 0.2em 0.4em;
+                border-radius: 3px;
+                font-family: 'Courier New', monospace;
+            }
+            pre {
+                background-color: #f8f9fa;
+                padding: 1em;
+                border-radius: 5px;
+                overflow-x: auto;
+                border-left: 4px solid #3498db;
+            }
+            @media print {
+                body {
+                    margin: 0;
+                    padding: 0.5in;
+                }
+                h1, h2, h3 {
+                    page-break-after: avoid;
+                }
+                p, .math {
+                    page-break-inside: avoid;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Arclength and Curvature</h2>
+<p>in R2
+$$
+\text{arclength is } \int_{a}^{b}  \sqrt{ \left( \frac{dy}{dt} \right) ^{2} + \left( \frac{dx}{dt} \right)^2  }\, dt
+$$</p>
+<p>in R3</p>
+<p>$$
+\int_{a}^{b}  \sqrt{ \left( \frac{dy}{dt} \right) ^{2} + \left( \frac{dx}{dt} \right)^2   + \left( \frac{dx}{dt} \right)^2 }   \, dt 
+$$</p>
+<p>generically/for vectors
+arclenght = 
+$$
+\int_{a}^{b}   ||\vec{r'}|| dt
+$$</p>
+<p>let 
+$$
+T(t) 
+$$
+be the unit tangent vector</p>
+<p>$$
+\text{using } T \cdot T \text{we prove that } T' \perp T
+$$</p>
+<p>for a true circle, r'' and T' are in the same direction </p>
+<p>CURVATURE:</p>
+<p>$$
+T = \frac{r'(t)}{||r'(t)||}
+$$
+T is a function of t, but we can find some expression of curvature for t</p>
+<p>$$
+\frac{dT}{dt} = \frac{dT}{ds} \cdot \frac{ds}{dt}
+$$</p>
+<p>$$
+k = \frac{dT}{ds} = \frac{\frac{dT}{ds}} {\frac{ds}{dt}}
+$$</p>
+<p>$$
+k = \frac{dT}{ds } = \frac{||T'(t)||}{||r'(t)||}
+$$</p>
+<p>but T' is difficult to find </p>
+<p>interesting thing ppl found:</p>
+<p>first note that </p>
+<p>$$
+r'(t) = \frac{ds}{dt} \cdot T 
+$$</p>
+<p>based on the dfn of the unit tangent vector </p>
+<p>$$
+r''(t) = \frac{d}{dt} \left( \frac{ds}{dt} T \right) = \frac{d^{2}s}{dt^{2}} T + \frac{ds}{dt} T'
+$$</p>
+<p>$$
+||r' \times r'' = || \frac{ds}{dt} \cdot T \times ( \frac{d^{2}s}{dt^{2}} T + \frac{ds}{dt} T')||
+$$</p>
+<p>distrib on RHS</p>
+<p>$$
+=  || \frac{ds}{dt} \frac{d^{2}s}{dt^{2}} \cdot T \times T + ( ( \frac{d^{2}s}{dt^{2}} )^2 + T\times T')||
+$$</p>
+<p>$$
+||r' \times r'' || = ||r'||^2 ||T|||
+$$</p>
+<p>$$
+||T'|| = \frac{||r'\times r''||}{||r'||^2}
+$$</p>
+<p>SO!!!</p>
+<p>curvature K is</p>
+<p>$$
+\frac{||r'\times r''||}{||r'||^3}
+$$
+$$
+\kappa = \frac{||T'||}{||\frac{ds}{dt}||} = \frac{||T'||}{||r'||}
+$$</p>
+<p>Special case in R2</p>
+<p>$$
+K(x) = \frac{||f''(x)||}{(1+(f'(x)^2)^{\frac{3}{2}})}
+$$</p>
+<p>let N be the normal vector to a point t
+$$
+N = \frac{T'(t)}{||T'(t)||} 
+$$</p>
+<p>Binormal Vector B</p>
+<p>$$
+B = T \times N 
+$$</p>
+<p>3 important properties </p>
+<p>$$
+\begin{matrix}
+B \perp T \
+B \perp N  \
+||B|| =1 
+\end{matrix}
+$$</p>
+<p>B is the normal vector for the osculating Plane like a tangent plane,</p>
+<p>T defines osculating plane </p>
+<p>The tangent circle (osculating circle) has radius given by</p>
+<p>$$
+P = \frac{1}{K }
+$$</p>
+    </body>
+    </html>
+    
